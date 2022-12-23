@@ -24,6 +24,8 @@ class _HomeState extends State<Home> {
   int day = 0;
   int tb=0;
   int td=0;
+  int nd=0;
+  int nm=0;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -278,12 +280,16 @@ class _HomeState extends State<Home> {
                                 {
                                   day = 30+x-a;
                                   month = y-b-1;
+                                  nd = 30-day;
+                                  nm=12-month;
 
                                 }
                                 else
                                   {
                                     day =x-a;
                                     month = y-b;
+                                    nd = 30-day;
+                                    nm=12-month;
                                   }
                               }
                             });
@@ -406,7 +412,7 @@ class _HomeState extends State<Home> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "$tb",
+                                  "$nm",
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 Text(
@@ -424,7 +430,7 @@ class _HomeState extends State<Home> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "$td",
+                                  "$nd",
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 Text(
